@@ -11,7 +11,7 @@ public class CreditCard {
 	  */
 	 public CreditCard(int cardNum, String branch, int creditLimit) {
 	  this.cardNum = cardNum;
-	  this.branch = branch;
+	  this.branch = branch
 	  this.creditLimit = creditLimit;
 	 }
 
