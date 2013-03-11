@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="compile" name="Dimitrios Serakis first build file for jenkins, compile java">
+	
 	<target name="compile">
 		<javac srcdir="src" destdir="build" />
 	</target>
 	<target name="run">
 	</target>
+	
 </project>
