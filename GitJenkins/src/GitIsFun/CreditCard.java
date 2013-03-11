@@ -4,7 +4,7 @@ public class CreditCard {
 	 int cardNum;
 	 String branch;
 	 int purchasedAmt;
-	 int creditLimit
+	 int creditLimit;
 	 
 	 /**
 	  * This creates a creditcard with given details.
