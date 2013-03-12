@@ -4,7 +4,7 @@ public class CreditCard {
 	 int cardNum;
 	 String branch;
 	 int purchasedAmt;
-	 int creditLimit;
+	 int creditLimit
 
 	 
 	 /**
