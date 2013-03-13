@@ -5,10 +5,11 @@ public class CreditCard {
 	 String branch;
 	 int purchasedAmt;
 	 int creditLimit;
+	 int sogeti = 1;
 
 	 
 	 /**
-	  * This creates a creditcard with given details.
+	  * This creates a CreditCard with given details.
 	  */
 	 public CreditCard(int cardNum, String branch, int creditLimit) {
 	  this.cardNum = cardNum;
