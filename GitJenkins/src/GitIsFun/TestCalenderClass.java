@@ -8,7 +8,7 @@ public class TestCalenderClass {
 
 	@Test
 	public void test_getValue() {
-		int nr = 3;
+		int nr = 4;
 		CalenderClass ex1 = new CalenderClass(nr, "Meet");
 		assertTrue(nr == ex1.getValue());
 	}
