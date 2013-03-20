@@ -25,13 +25,15 @@
 	</target>
 	
 	<target name="compile">
-		<javac classpathref="build.classpath" srcdir="${src.dir}" destdir="${build.dir}" />
+		<javac classpathref="build.classpath" srcdir="${src.dir}" destdir="${build.dir}" debug="true" />
 	</target>
 	
 
 	<target name="run" depends="compile">
 		<junit printummary="yes" haltonfailure="yes" fork="false">
 			<test name = "TestCalenderClass.java"/>
+			<formatter type="plain" usefile="false"/> 
+			<classpath refid="test.classpath" />
 		</junit>
 	</target>
 	
