@@ -6,7 +6,8 @@
 	
 	<path id="test.classpath">
 		<pathelement location="${build.dir}" />
-		<pathelement location="${lib.dir}/junit-4.10.jar" />
+		<pathelement location="${lib.dir}/junit-4.10.jar"/>
+		<pathelement path = "${src.dir}"/>
 		<fileset dir="${lib.dir}">
 			<include name="**/*.jar"/>
 		</fileset>
@@ -37,6 +38,8 @@
 	<target name="run" depends="compile">
 		<junit printsummary="yes" haltonfailure="yes" fork="false">
 			<test name = "TestCalenderClass.java"/>
+			<formatter type="plain" usefile="false"/> 
+			<classpath refid="test.classpath" />
 		</junit>
 	</target>
 	
