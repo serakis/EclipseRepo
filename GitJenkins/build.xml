@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="compile" name="Dimitrios Serakis first build file for jenkins, compile and run java">
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="build" />
 	
-	<fileset id="lib" dir="${lib.dir}">
+	<fileset id="lib" dir=".">
 		<include name="*.jar" />
 	</fileset>
 	
