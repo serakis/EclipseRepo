@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="compile" name="Dimitrios Serakis first build file for jenkins, compile java">
 	
+	<target name="clean">
+	    <delete dir="${build.dir}"/>
+	</target>
+	
 	<target name="compile">
 		<javac srcdir="src" destdir="build" />
 	</target>
-	<target name="run">
+	<target name="run" depends="compile">
+		<junit printummary="yes" haltonfailure="yes" fork="false">
+			<test name = "TestCalenderClass.java"/>
+		</junit>
 	</target>
 </project>

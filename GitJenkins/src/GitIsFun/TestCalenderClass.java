@@ -10,7 +10,11 @@ public class TestCalenderClass {
 	public void test_getValue() {
 		int nr = 4;
 		CalenderClass ex1 = new CalenderClass(nr, "Meet");
-		assertTrue(nr == ex1.getValue());
+		assertTrue(4 == ex1.getValue());
 	}
-
+	public void test_getName(){
+		String name = "Meeting NOW";
+		CalenderClass ex2 = new CalenderClass(4, "me");
+		assertTrue(name == ex2.getName());
+	}
 }
