@@ -35,7 +35,7 @@
 	</target>
 	
 	<target name="run" depends="compile">
-		<junit printummary="no" haltonfailure="yes" fork="false">
+		<junit printsummary="yes" haltonfailure="yes" fork="false">
 			<test name = "TestCalenderClass.java"/>
 			<formatter type="plain" usefile="false"/> 
 			<classpath refid="test.classpath" />
