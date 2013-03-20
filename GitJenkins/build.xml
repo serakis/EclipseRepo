@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="compile" name="Dimitrios Serakis first build file for jenkins, compile and run java">
 	
+	<fileset id="lib" dir="${lib.dir}">
+		<include name="*.jar" />
+	</fileset>
+	
 	<target name="clean">
 	    <delete dir="${build.dir}"/>
 	</target>
