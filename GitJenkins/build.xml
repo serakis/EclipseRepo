@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="compile" name="Dimitrios Serakis first build file for jenkins, compile and run java">
+<project default="run" name="Dimitrios Serakis first build file for jenkins, compile and run java">
 	<property name="src.dir" value="src" />
 	<property name="build.dir" value="build" />
 	<property name="lib.dir" value="lib" />
@@ -20,15 +20,20 @@
 		<fileset refid="lib" />
 	</path>
 	
+	<!-- Targets -->
+	
 	<target name="clean">
 	    <delete dir="${build.dir}"/>
 	</target>
 	
-	<target name="compile">
+	<target name="init" description="Initialize the build">
+		<mkdir dir="${build.dir}" />
+	</target>
+	
+	<target name="compile" depends="clean, init">
 		<javac classpathref="build.classpath" srcdir="${src.dir}" destdir="${build.dir}" debug="true" />
 	</target>
 	
-
 	<target name="run" depends="compile">
 		<junit printummary="yes" haltonfailure="yes" fork="false">
 			<test name = "TestCalenderClass.java"/>
