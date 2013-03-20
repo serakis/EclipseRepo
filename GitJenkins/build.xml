@@ -2,8 +2,17 @@
 <project default="compile" name="Dimitrios Serakis first build file for jenkins, compile and run java">
 	<property name="src.dir" value="src" />
 	<property name="build.dir" value="build" />
+	<property name="lib.dir" value="lib" />
 	
-	<fileset id="lib" dir=".">
+	<path id="test.classpath">
+		<pathelement location="${build.dir}" />
+		<pathelement location="${lib.dir}/junit-4.10.jar" />
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	<fileset id="lib" dir="${lib.dir}">
 		<include name="*.jar" />
 	</fileset>
 	
@@ -12,7 +21,7 @@
 	</target>
 	
 	<target name="compile">
-		<javac srcdir="src" destdir="build" />
+		<javac srcdir="${src.dir}" destdir="${build.dir}" />
 	</target>
 	
 	<target name="run" depends="compile">
@@ -20,4 +29,5 @@
 			<test name = "TestCalenderClass.java"/>
 		</junit>
 	</target>
+	
 </project>
