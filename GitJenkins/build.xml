@@ -16,14 +16,19 @@
 		<include name="*.jar" />
 	</fileset>
 	
+	<path id="build.classpath">
+		<fileset refid="lib" />
+	</path>
+	
 	<target name="clean">
 	    <delete dir="${build.dir}"/>
 	</target>
 	
 	<target name="compile">
-		<javac srcdir="${src.dir}" destdir="${build.dir}" />
+		<javac classpathref="build.classpath" srcdir="${src.dir}" destdir="${build.dir}" />
 	</target>
 	
+
 	<target name="run" depends="compile">
 		<junit printummary="yes" haltonfailure="yes" fork="false">
 			<test name = "TestCalenderClass.java"/>
