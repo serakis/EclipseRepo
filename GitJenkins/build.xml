@@ -3,6 +3,7 @@
 	<property name="src.dir" value="src" />
 	<property name="build.dir" value="build" />
 	<property name="lib.dir" value="lib" />
+	<property name="test.class.name" value="GitIsFun.TestCalenderClass"/>
 	
 	<path id="test.classpath">
 		<pathelement location="${build.dir}" />
@@ -34,7 +35,7 @@
 	
 	<target name="run" depends="compile">
 		<junit printsummary="yes" haltonfailure="yes" fork="false">
-			<test name = "TestCalenderClass"/>
+			<test name = "${test.class.name}"/>
 			<formatter type="plain" usefile="false"/> 
 			<classpath refid="test.classpath" />
 		</junit>
