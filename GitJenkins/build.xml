@@ -6,10 +6,10 @@
 	
 	<path id="test.classpath">
 		<pathelement location="${build.dir}" />
-		<pathelement location="${lib.dir}/junit-4.10.jar"/>
 		<pathelement path = "${src.dir}"/>
-		<fileset dir="${lib.dir}">
-			<include name="**/*.jar"/>
+		<fileset dir="${src.dir}">
+			<include name="**/*.java"/>
+			<exclude name="TestCalenderClass.java">
 		</fileset>
 	</path>
 	
