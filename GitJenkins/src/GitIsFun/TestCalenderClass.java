@@ -18,6 +18,6 @@ public class TestCalenderClass {
 		String name = "Meeting NOW";
 		CalenderClass ex2 = new CalenderClass(4, "me");
 		System.out.println("Testing function getName()");
-		assertTrue(name == ex2.getName());
+		assertEquals(name, ex2.getName());
 	}
 }
