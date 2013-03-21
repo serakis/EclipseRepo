@@ -9,6 +9,7 @@
 		<path refid="build.classpath"/>
 		<fileset dir="${build.dir}">
 			<include name="**/*.java"/>
+			<exclude name="TestCalenderClass.java"/>
 		</fileset>
 	</path>
 	
