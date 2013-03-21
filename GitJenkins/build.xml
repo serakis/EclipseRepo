@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="run" name="Dimitrios Serakis first build file for jenkins, compile and run java">
+<project default="run" basedir="." name="Dimitrios Serakis first build file for jenkins, compile and run java">
 	<property name="src.dir" value="src" />
 	<property name="build.dir" value="build" />
 	<property name="lib.dir" value="lib" />
