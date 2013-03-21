@@ -7,8 +7,8 @@
 	<path id="test.classpath">
 		<pathelement location="${build.dir}" />
 		<path refid="build.classpath"/>
-		<fileset dir="${src.dir}">
-			<include name="**/*.java"/>
+		<fileset dir="${build.dir}">
+			<include name="**/*.jar"/>
 		</fileset>
 	</path>
 	
