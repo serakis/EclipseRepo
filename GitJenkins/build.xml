@@ -9,7 +9,7 @@
 		<pathelement path = "${src.dir}"/>
 		<fileset dir="${src.dir}">
 			<include name="**/*.java"/>
-			<exclude name="TestCalenderClass.java">
+			<exclude name="TestCalenderClass.java"/>
 		</fileset>
 	</path>
 	
