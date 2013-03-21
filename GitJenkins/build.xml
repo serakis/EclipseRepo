@@ -6,23 +6,20 @@
 	
 	<path id="test.classpath">
 		<pathelement location="${build.dir}" />
-		<pathelement path = "${src.dir}"/>
-		<fileset dir="${src.dir}">
+		<pathelement path = "${lib.dir}/*.jar"/>
+		<fileset dir="${build.dir}">
 			<include name="**/*.java"/>
-			<exclude name="TestCalenderClass.java"/>
 		</fileset>
 	</path>
 	
-	<fileset id="lib" dir="${lib.dir}">
-		<include name="*.jar" />
-	</fileset>
-	
 	<path id="build.classpath">
-		<fileset refid="lib" />
+		<fileset id="lib" dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
 	</path>
 	
-	<!-- Targets -->
 	
+	<!-- Targets -->	
 	<target name="clean">
 	    <delete dir="${build.dir}"/>
 	</target>
