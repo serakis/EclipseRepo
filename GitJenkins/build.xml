@@ -9,7 +9,7 @@
 		<pathelement location="${build.dir}" />
 		<path refid="build.classpath"/>
 		<fileset dir="${build.dir}">
-			<include name="**/*.jar"/>
+			<include name="**/*.java"/>
 		</fileset>
 	</path>
 	
