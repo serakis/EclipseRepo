@@ -13,6 +13,7 @@ public class TestCalenderClass {
 		System.out.println("Testing function getValue()");
 		assertTrue(4 == ex1.getValue());
 	}
+	@Test
 	public void test_getName(){
 		String name = "Meeting NOW";
 		CalenderClass ex2 = new CalenderClass(4, "me");
