@@ -7,6 +7,7 @@ public class CalenderClass {
 	private int value;
 	private String name;
 	private Date date;
+	int i=0;
 	
 	public CalenderClass(final int value, final String name) {
 		this.value = value;
