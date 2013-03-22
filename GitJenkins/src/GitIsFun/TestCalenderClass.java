@@ -16,7 +16,7 @@ public class TestCalenderClass {
 	@Test
 	public void test_getName(){
 		String name = "Meeting NOW";
-		CalenderClass ex2 = new CalenderClass(4, name);
+		CalenderClass ex2 = new CalenderClass(4, "Mett");
 		System.out.println("Testing function getName()");
 		assertEquals(name, ex2.getName());
 	}
